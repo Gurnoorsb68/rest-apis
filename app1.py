@@ -53,7 +53,7 @@ def create_store_new():
     request_new_data = request.get_json()   #now request_new_data is a dictionary with the json format which was recieved
     add_store = {"name" : request_new_data["name"], "items" : request_new_data["items"]}
     stores.append(add_store)
-
+    print(add_store)    #testing on jenkins, rome this afterwards
     return add_store, 201   # return code 201 means accepted the data to create the store
 
 @app1.post("/store/<string:name>/item")     #in name give pass name of the store in postman
