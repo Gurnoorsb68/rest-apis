@@ -80,5 +80,5 @@ def get_item(name):
             return  {"items" : x["items"]}  # returning dictionary is better, u could have also done x["items"]
         return  {"message" : "missing store"} , 404
 
-app1.run()
-
+if __name__ == "__main__":
+    app1.run()
