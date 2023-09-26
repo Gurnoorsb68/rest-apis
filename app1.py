@@ -73,7 +73,7 @@ def get_store_info(name):
             return  x
         return  {"message" : "missing store"} , 404
 
-@app1.get("/store/<string:name>/itemdetails")   #APIs to get Items of particulaar stores
+@app1.get("/store/<string:name>/itemdetails")   #API to get Items of particulaar stores
 def get_item(name):
     for x in stores:
         if x["name"] == name:
