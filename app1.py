@@ -58,7 +58,7 @@ def create_store_new():
 
 @app1.post("/store/<string:name>/item")     #in name give pass name of the store in postman
 def create_item(name):
-    request_new_data = request.get_json()   #have the data from postman
+    request_new_data = request.get_json()   #have the data from postman to check
     for x in stores:
         if x["name"] == name:
             new_itm = {"name" : request_new_data["name"], "price" : request_new_data["price"]}
