@@ -78,7 +78,9 @@ def get_item(name):
     for x in stores:
         if x["name"] == name:
             return  {"items" : x["items"]}  # returning dictionary is better, u could have also done x["items"]
-        return  {"message" : "missing store"} , 404
+        return  {"message" : "missing store"} , 404 # error msg
 
+#if __name__ == "__main__":
+#    app1.run()
 if __name__ == "__main__":
-    app1.run()
+    app1.run(host="0.0.0.0", port=80)
