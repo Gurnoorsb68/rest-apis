@@ -77,7 +77,7 @@ def get_store_info(name):
 def get_item(name):
     for x in stores:
         if x["name"] == name:
-            return  {"items" : x["items"]}  # returning dictionary is better, u could have also done x["items"]
+            return  {"items" : x["items"]}  # returning dictionary is better, u could have also done x["items"] so
         return  {"message" : "missing store"} , 404 # error displayed
 
 #if __name__ == "__main__":
