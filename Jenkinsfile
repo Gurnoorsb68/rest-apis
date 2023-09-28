@@ -26,7 +26,7 @@ pipeline {
                         environmentName: 'Python-analyzer-env', // Elastic Beanstalk environment name
                         versionLabel: 'YourVersionLabel', // Unique version label for your deployment
                         description: 'Deployment from Jenkins',
-                        sourceBundle: [s3Bucket: '', // Leave this empty since you're not using S3
+                        sourceBundle: [s3Bucket: '', // Leave this empty since you're not using S3 b
                                       s3Key: 'myapp.zip'], // Provide the name of the zip file created in the previous stage
                         createApplicationVersion: true // Set to true to create a new application version
                     ]
