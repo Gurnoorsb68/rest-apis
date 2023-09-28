@@ -64,7 +64,7 @@ def create_item(name):
             new_itm = {"name" : request_new_data["name"], "price" : request_new_data["price"]}
             x["items"].append(new_itm)
             return  new_itm, 201
-        return  {"message" : "missing store"} , 404
+        return  {"message" : "missing store"} , 404 #error display
 
 @app1.get("/store/<string:name>")   #API to get perticular store name
 def get_store_info(name):
