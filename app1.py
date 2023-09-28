@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, request
 
 app1 = Flask(__name__)  #app1 is also the FILE NAME
@@ -83,4 +85,6 @@ def get_item(name):
 #if __name__ == "__main__":
 #    app1.run()
 if __name__ == "__main__":
-    app1.run(host="0.0.0.0", port=80)
+    #app1.run(host="0.0.0.0", port=80)
+    import uvicorn
+    uvicorn.run(app1, port=os.getenv('PORT', 8000), host=os.getenv('HOST', '0.0.0.0'))
