@@ -66,7 +66,7 @@ def create_item(name):
             return  new_itm, 201
         return  {"message" : "missing store"} , 404 #error display
 
-@app1.get("/store/<string:name>")   #API to get perticular store ss
+@app1.get("/store/<string:name>")   #API to get perticular store s
 def get_store_info(name):
     for x in stores:
         if x["name"] == name:   #check store names
