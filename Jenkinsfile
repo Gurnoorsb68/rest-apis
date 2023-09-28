@@ -20,10 +20,10 @@ pipeline {
             steps {
                 script {
                     def elasticBeanstalkDeploy = [
-                        credentialsId: 'your-aws-credentials', // AWS credentials ID configured in Jenkins
+                        credentialsId: 'aws cred', // AWS credentials ID configured in Jenkins
                         region: 'us-east-1', // AWS region where your Elastic Beanstalk environment is located
-                        applicationName: 'YourApplicationName', // Elastic Beanstalk application name
-                        environmentName: 'YourEnvironmentName', // Elastic Beanstalk environment name
+                        applicationName: 'python-analyzer', // Elastic Beanstalk application name
+                        environmentName: 'Python-analyzer-env', // Elastic Beanstalk environment name
                         versionLabel: 'YourVersionLabel', // Unique version label for your deployment
                         description: 'Deployment from Jenkins',
                         sourceBundle: [s3Bucket: '', // Leave this empty since you're not using S3
